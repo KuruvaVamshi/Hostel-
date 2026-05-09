@@ -491,6 +491,161 @@ button {
   font-weight: 800;
 }
 
+.hostels-section {
+  background: linear-gradient(180deg, var(--ice), var(--white));
+}
+
+.hostel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.hostel-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 32px;
+  border: 1px solid rgba(12, 45, 90, 0.1);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.82)),
+    radial-gradient(circle at 14% 18%, rgba(240, 202, 115, 0.22), transparent 31%);
+  box-shadow: var(--shadow-soft);
+}
+
+.hostel-card-accent {
+  color: var(--white);
+  border-color: rgba(240, 202, 115, 0.24);
+  background:
+    linear-gradient(135deg, rgba(6, 21, 45, 0.94), rgba(12, 45, 90, 0.88)),
+    url("https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1500&q=85") center/cover;
+}
+
+.hostel-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.hostel-card-top span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 8px 13px;
+  border-radius: 999px;
+  color: var(--navy-950);
+  background: var(--gold-400);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hostel-card-top svg {
+  width: 46px;
+  height: 46px;
+  padding: 11px;
+  border-radius: 16px;
+  color: var(--navy-950);
+  background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+}
+
+.hostel-card h3 {
+  margin: 0;
+  color: var(--navy-950);
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1.08;
+}
+
+.hostel-card p {
+  color: var(--muted);
+}
+
+.hostel-card-accent h3,
+.hostel-card-accent p,
+.hostel-card-accent .hostel-features li {
+  color: var(--white);
+}
+
+.hostel-card-accent p,
+.hostel-card-accent .hostel-features li {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.hostel-features {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hostel-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #33405a;
+  font-weight: 800;
+}
+
+.hostel-features svg {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  color: var(--gold-500);
+}
+
+.hostel-offer {
+  width: fit-content;
+  margin: 22px 0 0;
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: var(--navy-950) !important;
+  background: var(--gold-400);
+  font-weight: 900;
+}
+
+.hostel-contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.hostel-contact-row a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 14px;
+  border: 1px solid rgba(12, 45, 90, 0.12);
+  border-radius: 999px;
+  color: var(--navy-950);
+  background: var(--white);
+  font-weight: 900;
+  box-shadow: 0 10px 26px rgba(6, 21, 45, 0.08);
+}
+
+.hostel-card-accent .hostel-contact-row a {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.hostel-contact-row svg {
+  width: 17px;
+  height: 17px;
+  color: var(--gold-500);
+}
+
 .about-section {
   background:
     linear-gradient(180deg, var(--ice), var(--white));
@@ -787,6 +942,11 @@ button {
   align-items: stretch;
 }
 
+.location-list {
+  display: grid;
+  gap: 18px;
+}
+
 .map-wrap {
   min-height: 460px;
   overflow: hidden;
@@ -807,7 +967,7 @@ button {
 .location-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   padding: 34px;
   border: 1px solid rgba(12, 45, 90, 0.09);
@@ -901,6 +1061,16 @@ button {
   margin: 4px 0 0;
   color: rgba(255, 255, 255, 0.72);
   overflow-wrap: anywhere;
+}
+
+.phone-list {
+  display: grid;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.phone-list a {
+  margin: 0;
 }
 
 .footer {
@@ -1114,6 +1284,7 @@ button {
   }
 
   .stats-grid,
+  .hostel-grid,
   .room-grid,
   .facility-grid,
   .about-grid,
@@ -1130,6 +1301,7 @@ button {
   }
 
   .room-grid,
+  .hostel-grid,
   .facility-grid {
     gap: 18px;
   }
@@ -1228,6 +1400,7 @@ button {
   }
 
   .stats-grid,
+  .hostel-grid,
   .room-grid,
   .facility-grid,
   .about-grid,
