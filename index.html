@@ -54,7 +54,7 @@
             "addressCountry": "IN"
           },
           "areaServed": "L.B. Nagar, Hyderabad",
-          "hasMap": "https://www.google.com/maps/search/?api=1&query=Road%20No.%203%2C%20Kakatiya%20Nagar%2C%20L.B.%20Nagar%2C%20Hyderabad"
+          "hasMap": "https://maps.app.goo.gl/J3w9fXBAoEyA3Cvc8"
         }
       ]
     }
@@ -90,7 +90,7 @@
         <a href="#about">About</a>
         <a href="#rooms">Rooms</a>
         <a href="#facilities">Facilities</a>
-        <a href="#gallery">Gallery</a>
+        <a href="gallery.html">Gallery</a>
         <a href="#location">Location</a>
         <a href="#contact">Contact</a>
       </div>
@@ -117,6 +117,10 @@
           <a class="btn btn-secondary" href="#hostels">
             <i data-lucide="building-2" aria-hidden="true"></i>
             View Hostels
+          </a>
+          <a class="btn btn-secondary" href="gallery.html">
+            <i data-lucide="images" aria-hidden="true"></i>
+            View Gallery
           </a>
         </div>
       </div>
@@ -332,30 +336,26 @@
       </div>
     </section>
 
-    <section class="section gallery-section" id="gallery">
+    <section class="section gallery-section gallery-cta-section" id="gallery">
       <div class="container">
         <div class="section-heading reveal">
           <p class="section-kicker">Gallery</p>
-          <h2>Preview the living spaces.</h2>
-          <p>A clean visual look at rooms, dining spaces, beds, exterior areas and washroom-style amenities.</p>
+          <h2>See the boys hostel rooms clearly.</h2>
+          <p>The full room gallery has its own page so the photos stay large, clean and easy to browse on mobile.</p>
         </div>
-
-        <div class="gallery-grid">
-          <button class="gallery-item large reveal" data-full="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1600&q=85" aria-label="Open room photo">
-            <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=900&q=80" alt="Hostel room with multiple beds">
-          </button>
-          <button class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1600&q=85" aria-label="Open dining area photo">
-            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80" alt="Clean dining area">
-          </button>
-          <button class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=85" aria-label="Open bed photo">
-            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Comfortable bed and room setup">
-          </button>
-          <button class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=85" aria-label="Open exterior building photo">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="Modern building exterior">
-          </button>
-          <button class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=85" aria-label="Open washroom photo">
-            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="Clean washroom area">
-          </button>
+        <div class="gallery-teaser reveal">
+          <a class="gallery-teaser-image" href="gallery.html" aria-label="Open boys hostel room gallery">
+            <img src="images/gallery/boys-hostel-room-10.jpg" alt="Boys hostel shared room with multiple beds" loading="lazy" decoding="async">
+          </a>
+          <div class="gallery-teaser-copy">
+            <span><i data-lucide="image" aria-hidden="true"></i> 16 room photos</span>
+            <h3>Boys hostel room gallery</h3>
+            <p>A dedicated page keeps every room photo large, clear, and easy to compare before a visit.</p>
+            <a class="btn btn-primary" href="gallery.html">
+              <i data-lucide="images" aria-hidden="true"></i>
+              Open Gallery
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -365,33 +365,45 @@
         <div class="section-heading reveal">
           <p class="section-kicker">Location</p>
           <h2>Easy to reach for men's and women's hostel stays.</h2>
-          <p>Men's/boys hostel: West Marredpally, Secunderabad. Women's hostel: Road No. 3, Kakatiya Nagar near L.B. Nagar Metro Station.</p>
+          <p>Men's/boys hostel: West Marredpally, Secunderabad. Girls PG / women's hostel: use the pinned L.B. Nagar Google Maps location for accurate directions.</p>
         </div>
 
         <div class="location-grid">
-          <div class="map-wrap reveal">
-            <iframe title="Manjunatha Deluxe men's/boys hostel location map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2276119124053!2d78.5029106749362!3d17.4488166834489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b00532c5cb9%3A0x4088e857fd5257f4!2sManjunatha%20Deluxe%20boys%20hostel!5e0!3m2!1sen!2sin!4v1778342352287!5m2!1sen!2sin" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <aside class="location-list">
-            <article class="location-card reveal">
+          <article class="location-map-card reveal">
+            <div class="location-card-head">
               <span class="icon-pill"><i data-lucide="map-pinned" aria-hidden="true"></i></span>
-              <h3>Men's/Boys Hostel: Manjunatha Deluxe</h3>
-              <p>Men's/boys hostel address: Lane Number 7, Nehru Nagar, West Marredpally, Secunderabad, Telangana 500026</p>
-              <a class="btn btn-primary" href="https://maps.app.goo.gl/LD5cH1LsXeyKGTDB9" target="_blank" rel="noopener">
-                <i data-lucide="navigation" aria-hidden="true"></i>
-                Open in Maps
-              </a>
-            </article>
-            <article class="location-card reveal">
+              <div>
+                <p class="location-label">Men's/Boys Hostel</p>
+                <h3>Manjunatha Deluxe</h3>
+              </div>
+            </div>
+            <p>Lane Number 7, Nehru Nagar, West Marredpally, Secunderabad, Telangana 500026</p>
+            <div class="map-wrap">
+              <iframe title="Manjunatha Deluxe men's/boys hostel location map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2276119124053!2d78.5029106749362!3d17.4488166834489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b00532c5cb9%3A0x4088e857fd5257f4!2sManjunatha%20Deluxe%20boys%20hostel!5e0!3m2!1sen!2sin!4v1778342352287!5m2!1sen!2sin" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <a class="btn btn-primary" href="https://maps.app.goo.gl/LD5cH1LsXeyKGTDB9" target="_blank" rel="noopener">
+              <i data-lucide="navigation" aria-hidden="true"></i>
+              Open in Maps
+            </a>
+          </article>
+
+          <article class="location-map-card reveal">
+            <div class="location-card-head">
               <span class="icon-pill"><i data-lucide="map-pinned" aria-hidden="true"></i></span>
-              <h3>Women's Hostel: Sai Tharushi Grand</h3>
-              <p>Women's hostel address: Road No. 3, Kakatiya Nagar, L.B. Nagar, Hyderabad. Near L.B. Nagar Metro Station.</p>
-              <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Road%20No.%203%2C%20Kakatiya%20Nagar%2C%20L.B.%20Nagar%2C%20Hyderabad" target="_blank" rel="noopener">
-                <i data-lucide="navigation" aria-hidden="true"></i>
-                Open in Maps
-              </a>
-            </article>
-          </aside>
+              <div>
+                <p class="location-label">Girls PG / Women's Hostel</p>
+                <h3>Sai Tharushi Grand</h3>
+              </div>
+            </div>
+            <p>Girls PG location pinned on Google Maps for accurate directions in L.B. Nagar, Hyderabad.</p>
+            <div class="map-wrap">
+              <iframe title="Girls PG location map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.384302142278!2d78.545161!3d17.345231199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99000b7c8781%3A0xf937ee1514f9d80a!2sAnanda%20Nilayam%20Ed-Am!5e0!3m2!1sen!2sin!4v1778403361518!5m2!1sen!2sin" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <a class="btn btn-primary" href="https://maps.app.goo.gl/J3w9fXBAoEyA3Cvc8" target="_blank" rel="noopener">
+              <i data-lucide="navigation" aria-hidden="true"></i>
+              Open in Maps
+            </a>
+          </article>
         </div>
       </div>
     </section>
@@ -462,19 +474,19 @@
         <a href="#about">About</a>
         <a href="#rooms">Rooms</a>
         <a href="#facilities">Facilities</a>
-        <a href="#gallery">Gallery</a>
+        <a href="gallery.html">Gallery</a>
       </div>
       <div>
         <h3>Connect</h3>
         <div class="social-links">
-          <a href="#" aria-label="Facebook"><i data-lucide="facebook" aria-hidden="true"></i></a>
-          <a href="#" aria-label="Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a>
-          <a href="https://wa.me/919738610718" target="_blank" rel="noopener" aria-label="WhatsApp"><i data-lucide="message-circle" aria-hidden="true"></i></a>
+          <a href="tel:+919738610718" aria-label="Call Manjunatha Hostels"><i data-lucide="phone-call" aria-hidden="true"></i></a>
+          <a href="https://wa.me/919738610718?text=Hello%20Manjunatha%20Hostels%2C%20I%20would%20like%20to%20know%20about%20hostel%20room%20availability." target="_blank" rel="noopener" aria-label="WhatsApp Manjunatha Hostels"><i data-lucide="message-circle" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> Manjunatha Hostels. All rights reserved.</p>
+      <p>&copy; <span id="year"></span> <span class="footer-name">Manjunatha Hostels</span>. All rights reserved.</p>
+      <p class="site-credit">Website By <a href="https://www.linkedin.com/in/vamshi-kuruva/" target="_blank" rel="noopener">Vamshi</a></p>
     </div>
   </footer>
 
@@ -486,7 +498,13 @@
     <button class="lightbox-close" type="button" aria-label="Close gallery preview">
       <i data-lucide="x" aria-hidden="true"></i>
     </button>
+    <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous gallery image">
+      <i data-lucide="chevron-left" aria-hidden="true"></i>
+    </button>
     <img src="" alt="">
+    <button class="lightbox-nav lightbox-next" type="button" aria-label="Next gallery image">
+      <i data-lucide="chevron-right" aria-hidden="true"></i>
+    </button>
   </div>
 
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>

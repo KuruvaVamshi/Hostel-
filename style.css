@@ -885,31 +885,148 @@ button {
   background: linear-gradient(180deg, var(--white), #eef4ff);
 }
 
-.gallery-grid {
+.gallery-cta-section {
+  overflow: hidden;
+}
+
+.gallery-teaser {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 240px;
-  gap: 18px;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 28px;
+  align-items: center;
+  padding: 22px;
+  border: 1px solid rgba(12, 45, 90, 0.09);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.86)),
+    radial-gradient(circle at 15% 18%, rgba(240, 202, 115, 0.2), transparent 28%);
+  box-shadow: var(--shadow-soft);
+}
+
+.gallery-teaser-image {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  border-radius: var(--radius-md);
+  background: var(--navy-900);
+  box-shadow: 0 18px 44px rgba(6, 21, 45, 0.16);
+}
+
+.gallery-teaser-image img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.gallery-teaser-image:hover img {
+  transform: scale(1.035);
+}
+
+.gallery-teaser-copy {
+  padding: 12px;
+}
+
+.gallery-teaser-copy span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  color: var(--gold-500);
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.gallery-teaser-copy span svg {
+  width: 17px;
+  height: 17px;
+}
+
+.gallery-teaser-copy h3 {
+  margin: 0;
+  color: var(--navy-950);
+  font-size: clamp(1.7rem, 3vw, 2.55rem);
+  line-height: 1.08;
+}
+
+.gallery-teaser-copy p {
+  margin: 16px 0 24px;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.gallery-page-hero {
+  position: relative;
+  min-height: 76svh;
+  display: grid;
+  align-items: end;
+  padding: 142px 20px 72px;
+  color: var(--white);
+  overflow: hidden;
+}
+
+.gallery-page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("images/gallery/boys-hostel-room-10.jpg");
+  background-position: center;
+  background-size: cover;
+  transform: scale(1.04);
+}
+
+.gallery-page-hero-content {
+  position: relative;
+  z-index: 2;
+  width: var(--container);
+  margin: 0 auto;
+}
+
+.gallery-page-hero-content h1 {
+  max-width: 760px;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.gallery-page-hero-content p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 22px 0 30px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(1rem, 2vw, 1.22rem);
+  font-weight: 700;
+}
+
+.gallery-page-section {
+  padding-top: 92px;
+}
+
+.gallery-grid {
+  column-count: 3;
+  column-gap: 18px;
 }
 
 .gallery-item {
   position: relative;
   overflow: hidden;
+  display: block;
+  width: 100%;
+  margin: 0 0 18px;
+  padding: 0;
   border: 0;
   border-radius: var(--radius-md);
   background: var(--navy-900);
   box-shadow: var(--shadow-soft);
-}
-
-.gallery-item.large {
-  grid-column: span 2;
-  grid-row: span 2;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  transform: translateZ(0);
 }
 
 .gallery-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   transition: transform 0.38s ease, opacity 0.38s ease;
 }
 
@@ -923,7 +1040,7 @@ button {
 }
 
 .gallery-item:hover img {
-  transform: scale(1.08);
+  transform: scale(1.025);
   opacity: 0.92;
 }
 
@@ -937,14 +1054,9 @@ button {
 
 .location-grid {
   display: grid;
-  grid-template-columns: 1.35fr 0.65fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   align-items: stretch;
-}
-
-.location-list {
-  display: grid;
-  gap: 18px;
 }
 
 .map-wrap {
@@ -976,6 +1088,69 @@ button {
     linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.78)),
     radial-gradient(circle at 12% 16%, rgba(240, 202, 115, 0.24), transparent 30%);
   box-shadow: var(--shadow-soft);
+}
+
+.location-map-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+  border: 1px solid rgba(12, 45, 90, 0.09);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.84)),
+    radial-gradient(circle at 12% 16%, rgba(240, 202, 115, 0.2), transparent 30%);
+  box-shadow: var(--shadow-soft);
+}
+
+.location-card-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.location-card-head .icon-pill {
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+
+.location-label {
+  margin: 0 0 4px;
+  color: var(--gold-500);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.location-map-card h3 {
+  margin: 0;
+  color: var(--navy-950);
+  font-size: clamp(1.35rem, 2.3vw, 1.9rem);
+  line-height: 1.12;
+}
+
+.location-map-card p:not(.location-label) {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.location-map-card .map-wrap {
+  min-height: 340px;
+  border-width: 8px;
+  border-radius: var(--radius-md);
+  box-shadow: none;
+}
+
+.location-map-card .map-wrap iframe {
+  min-height: 340px;
+}
+
+.location-map-card .btn {
+  width: fit-content;
+  margin-top: auto;
 }
 
 .icon-pill {
@@ -1118,6 +1293,16 @@ button {
   margin-bottom: 18px;
 }
 
+.footer-brand strong,
+.footer-brand small,
+.footer-name {
+  color: var(--gold-400);
+}
+
+.footer-name {
+  font-weight: 800;
+}
+
 .social-links {
   display: flex;
   gap: 12px;
@@ -1156,6 +1341,19 @@ button {
   max-width: none;
   margin: 0;
   font-size: 0.9rem;
+}
+
+.footer-bottom .site-credit {
+  margin-top: 6px;
+}
+
+.site-credit a {
+  color: var(--gold-400);
+  font-weight: 800;
+}
+
+.site-credit a:hover {
+  color: var(--white);
 }
 
 .floating-whatsapp {
@@ -1228,6 +1426,41 @@ button {
 .lightbox-close svg {
   width: 24px;
   height: 24px;
+}
+
+.lightbox-nav {
+  position: fixed;
+  top: 50%;
+  z-index: 2;
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  transform: translateY(-50%);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-nav:hover {
+  background: rgba(240, 202, 115, 0.24);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.lightbox-prev {
+  left: 22px;
+}
+
+.lightbox-next {
+  right: 22px;
+}
+
+.lightbox-nav svg {
+  width: 30px;
+  height: 30px;
 }
 
 .reveal {
@@ -1313,7 +1546,11 @@ button {
   }
 
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+    column-count: 2;
+  }
+
+  .gallery-page-hero {
+    min-height: 70svh;
   }
 
   .footer-grid > div:first-child,
@@ -1434,18 +1671,85 @@ button {
   }
 
   .gallery-grid {
-    grid-template-columns: 1fr;
-    grid-auto-rows: 240px;
+    column-count: 1;
   }
 
-  .gallery-item.large {
-    grid-column: span 1;
-    grid-row: span 1;
+  .gallery-teaser {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 16px;
+  }
+
+  .gallery-teaser-copy {
+    padding: 2px 4px 8px;
+  }
+
+  .gallery-teaser-image img {
+    aspect-ratio: 3 / 4;
+  }
+
+  .gallery-page-hero {
+    min-height: 82svh;
+    padding: 124px 16px 64px;
+  }
+
+  .gallery-page-hero-bg {
+    background-position: 42% center;
+  }
+
+  .gallery-page-hero-content h1 {
+    font-size: clamp(2.8rem, 13vw, 4.6rem);
+  }
+
+  .gallery-item {
+    margin-bottom: 16px;
+  }
+
+  .lightbox {
+    padding: 18px;
+  }
+
+  .lightbox img {
+    max-height: 76vh;
+    border-width: 5px;
+  }
+
+  .lightbox-nav {
+    top: auto;
+    bottom: 20px;
+    width: 52px;
+    height: 52px;
+    transform: none;
+  }
+
+  .lightbox-nav:hover {
+    transform: scale(1.04);
+  }
+
+  .lightbox-prev {
+    left: calc(50% - 66px);
+  }
+
+  .lightbox-next {
+    right: calc(50% - 66px);
   }
 
   .map-wrap,
   .map-wrap iframe {
     min-height: 360px;
+  }
+
+  .location-map-card {
+    padding: 18px;
+  }
+
+  .location-map-card .map-wrap,
+  .location-map-card .map-wrap iframe {
+    min-height: 320px;
+  }
+
+  .location-map-card .btn {
+    width: 100%;
   }
 
   .location-card,
